@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CourseViewActivity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Darkgray"
+        >
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:videoId="S0Q4gqBUs7c"
+            app:autoPlay="true" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        >
+
+
+        <TextView
+            android:id="@+id/tvCourseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The Complete Flutter Academy for Beginners- Flutter Dart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/opensans_semibold"
+            />
+
+
+        <TextView
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Louis-Philippe Papeneao, Flutter Mapp "
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/opensans"
+            />
+
+        <TextView
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lectures"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/opensans_semibold"
+            />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLecture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

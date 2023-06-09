@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="@dimen/_10sdp">
+
+
+
+    <LinearLayout
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <com.google.android.material.card.MaterialCardView
+            app:cardElevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@drawable/ms_img"
+                />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The  Complete Microsoft word"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/opensans_semibold"
+            />
+
+        <TextView
+            android:id="@+id/tvAuthor"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Denis Panjuta, Tutorials.eu by Denis pann"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/opensans"
+            />
+
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="₹ 450"
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/opensans_semibold"
+            android:textColor="@color/black"
+            />
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:orientation="horizontal"
+        >
+
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/tvNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. "
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_marginRight="@dimen/_10sdp"
+            />
+
+
+        <LinearLayout
+            android:layout_toLeftOf="@+id/ivDownload"
+            android:layout_toRightOf="@+id/tvNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+        <TextView
+            android:id="@+id/tvCourseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Windows - Install Flutter"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/opensans_semibold"
+            />
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video - 04:55 mins"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/opensans"
+                />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ivDownload"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/ic_download"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

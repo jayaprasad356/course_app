@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_20sdp">
+
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="@string/account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+
+
+            <ImageButton
+                android:id="@+id/ibCart"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_cart"
+                android:backgroundTint="@color/Darkgray" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl1"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_20sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_profile"
+                    android:backgroundTint="@color/primary_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Tamil"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:drawableStart="@drawable/ic_baseline_mail_outline_24"
+                    android:drawablePadding="@dimen/_6sdp"
+                    android:drawableTint="@color/Darkgray"
+                    android:fontFamily="@font/opensans"
+                    android:gravity="center"
+                    android:text="tamil632000@gmail.com"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About Cource App"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/opensans_semibold"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_rightarrow"
+                android:layout_marginBottom="@dimen/_10sdp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rating"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/opensans_semibold"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_rightarrow"
+                android:layout_marginBottom="@dimen/_10sdp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Feedback"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/opensans_semibold"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_rightarrow"
+                android:layout_marginBottom="@dimen/_10sdp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share the Course app"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/opensans_semibold"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_rightarrow"
+                android:layout_marginBottom="@dimen/_10sdp"
+                />
+
+                <TextView
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/logout"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:textColor="@color/primary_color"
+                    />
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="version : 1.0"
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/opensans"
+                    />
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

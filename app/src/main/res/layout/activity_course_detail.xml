@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CourseDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        >
+
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:background="@drawable/ic_arrow_back"
+            />
+
+        <ImageButton
+            android:id="@+id/ibCart"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:background="@drawable/ic_cart"
+            />
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp"
+                    android:background="@drawable/ms_img"
+                    />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_20sdp"
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The  Complete Microsoft word"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:fontFamily="@font/opensans_semibold"
+                />
+
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Learn Android  12 App Development  From  Beginner to Advanced Developer. Build Apps  like  Trello, 7Mi n Workout,Wether App"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/opensans"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Created  by "
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Denis Panjuta "
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:textColor="@color/primary_color"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="and"
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Tutorials.eu by Denis panjuta "
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:textColor="@color/primary_color"
+                    />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last  updated 05/2023"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/opensans_semibold"
+                android:drawableStart="@drawable/ic_info"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:textColor="@color/Darkgray"
+                />
+            <TextView
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="English"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/opensans_semibold"
+                android:drawableStart="@drawable/ic_language"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:textColor="@color/Darkgray"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
