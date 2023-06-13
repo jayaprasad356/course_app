@@ -13,4 +13,9 @@
     <string name="my_course">My Course</string>
     <string name="start_course">Start Course</string>
     <string name="logout">Logout</string>
+    <string name="refer_code">Refer Code</string>
+    <string name="refer_code_optional">Refer Code (Optional)</string>
+    <string name="edit">Edit</string>
+    <string name="update">Update</string>
+    <string name="session">Session</string>
 </resources>

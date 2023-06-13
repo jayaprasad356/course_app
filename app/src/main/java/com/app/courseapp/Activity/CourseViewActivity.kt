@@ -17,8 +17,7 @@ class CourseViewActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityCourseViewBinding
     lateinit var activity: Activity
-    private lateinit var youtubePlayerView: YouTubePlayerView
-    private lateinit var youtubePlayer: YouTubePlayer
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,16 +33,7 @@ class CourseViewActivity : AppCompatActivity() {
         lectureList()
 
 
-        youtubePlayerView = binding.youtubePlayerView
-        lifecycle.addObserver(youtubePlayerView)
 
-        youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
-            override fun onReady(youTubePlayer: com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer) {
-                youtubePlayer = youTubePlayer
-                youtubePlayer.loadVideo("dQw4w9WgXcQ", 0f)
-            }
-
-        })
 
 
         return setContentView(binding!!.root)
@@ -66,8 +56,4 @@ class CourseViewActivity : AppCompatActivity() {
     }
 
 
-    override fun onDestroy() {
-        super.onDestroy()
-        lifecycle.removeObserver(youtubePlayerView)
-    }
 }

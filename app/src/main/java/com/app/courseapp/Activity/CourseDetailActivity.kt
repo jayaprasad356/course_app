@@ -24,6 +24,7 @@ class CourseDetailActivity : AppCompatActivity() {
         binding.ibBack.setOnClickListener {
 
             onBackPressed()
+            finish()
 
         }
 

@@ -53,16 +53,7 @@
             />
 
 
-        <TextView
-            android:id="@+id/tvPrice"
-            android:layout_marginTop="@dimen/_4sdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="₹ 450"
-            android:textSize="@dimen/_16sdp"
-            android:fontFamily="@font/opensans_semibold"
-            android:textColor="@color/black"
-            />
+
 
 
 

@@ -10,31 +10,58 @@ import com.app.courseapp.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var btnLogin: Button
-    lateinit var tvCreateAccount : TextView
+
+
+    lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
 
 
 
-        btnLogin = findViewById(R.id.btnLogin)
-        tvCreateAccount = findViewById(R.id.tvCreateAccount)
+        binding.btnLogin.setOnClickListener {
 
 
-       btnLogin.setOnClickListener {
+            if (binding.etPhoneNumber.text.toString().isEmpty()) {
+                binding.etPhoneNumber.error = "Please enter your phone number"
+                return@setOnClickListener
+            }
 
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            else if (binding.etPhoneNumber.text.toString().length != 10) {
+                binding.etPhoneNumber.error = "Please enter valid phone number"
+                return@setOnClickListener
+            }
+
+            else  if (binding.etPassword.text.toString().isEmpty()) {
+                binding.etPassword.error = "Please enter your password"
+                return@setOnClickListener
+            }
+
+            //  binding.etPassword is should 5 digit
+
+
+            else {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+
+
         }
 
-        tvCreateAccount.setOnClickListener {
+        binding. tvCreateAccount.setOnClickListener {
 
             val intent = Intent(this, CreateAccountActivity::class.java)
             startActivity(intent)
         }
+
+        setContentView(binding.root)
+
+
+
+
+
 
 
 

@@ -8,108 +8,95 @@
     android:padding="@dimen/_20sdp">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-       android:layout_centerInParent="true"
+        android:layout_centerInParent="true"
         android:layout_marginBottom="@dimen/_20sdp"
-        >
+        android:orientation="vertical">
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
             android:fontFamily="@font/opensans_semibold"
-            android:textSize="@dimen/_22sdp"
+            android:gravity="center"
+            android:text="Login"
             android:textColor="@color/black"
-            android:gravity="center"
-            />
+            android:textSize="@dimen/_22sdp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans"
+            android:gravity="center"
             android:text="By using our services you are agreeing to our  Terms and Privacy Statement"
-            android:fontFamily="@font/opensans"
-            android:textSize="@dimen/_10sdp"
-            android:gravity="center"
-            />
-
+            android:textSize="@dimen/_10sdp" />
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="@dimen/_20sdp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
             android:hint="@string/phone_number"
-            app:boxStrokeColor="@color/primary_color"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            >
+            app:boxStrokeColor="@color/primary_color">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:maxLength="10"
+                android:inputType="number" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="@dimen/_20sdp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
             android:hint="@string/password"
-            app:boxStrokeColor="@color/primary_color"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            >
+            app:endIconMode="password_toggle"
+            app:boxStrokeColor="@color/primary_color">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
+
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Forgot Password ?"
-            android:gravity="right"
-            android:layout_marginTop="@dimen/_4sdp"
-            android:textSize="@dimen/_12sdp"
-            android:textColor="@color/primary_color"
-            android:fontFamily="@font/opensans"
 
-            />
 
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Log In"
-            android:textAllCaps="false"
             android:layout_marginTop="@dimen/_30sdp"
             android:backgroundTint="@color/primary_color"
-            android:paddingVertical="@dimen/_10sdp"
             android:fontFamily="@font/opensans"
-            android:textColor="@color/white"
-            />
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Log In"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
 
 
         <TextView
             android:id="@+id/tvCreateAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Don’t Have a Account?"
-            android:gravity="center"
             android:layout_marginTop="@dimen/_10sdp"
-            android:textSize="@dimen/_12sdp"
             android:fontFamily="@font/opensans"
+            android:gravity="center"
+            android:text="Don’t Have a Account?"
             android:textColor="@color/primary_color"
-            />
-
+            android:textSize="@dimen/_12sdp" />
 
 
     </LinearLayout>

@@ -9,18 +9,18 @@
 
 
     <RelativeLayout
+        android:layout_margin="@dimen/_5sdp"
         android:id="@+id/rl1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/Darkgray"
+        android:layout_height="@dimen/_160sdp"
         >
 
-        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-            android:id="@+id/youtube_player_view"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:videoId="S0Q4gqBUs7c"
-            app:autoPlay="true" />
+            android:background="@drawable/ms_img"
+
+            />
 
 
     </RelativeLayout>
@@ -59,7 +59,7 @@
             android:layout_marginTop="@dimen/_12sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lectures"
+            android:text="@string/session"
             android:textColor="@color/primary_color"
             android:textSize="@dimen/_12sdp"
             android:fontFamily="@font/opensans_semibold"

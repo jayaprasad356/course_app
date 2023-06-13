@@ -13,6 +13,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.app.courseapp.Activity.CourseDetailActivity
+import com.app.courseapp.Activity.CourseViewActivity
 import com.app.courseapp.Model.HomeCourseList
 import com.app.courseapp.R
 
@@ -43,7 +44,7 @@ class HomeCourseListAdapter (
 
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(activity, CourseDetailActivity::class.java)
+            val intent = Intent(activity, CourseViewActivity::class.java)
             activity.startActivity(intent)
         }
 
@@ -59,13 +60,11 @@ class HomeCourseListAdapter (
     internal class ItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvTitle: TextView
         val tvAuthor: TextView
-        val tvPrice: TextView
 
 
         init {
             tvTitle = itemView.findViewById(R.id.tvTitle)
             tvAuthor = itemView.findViewById(R.id.tvAuthor)
-            tvPrice = itemView.findViewById(R.id.tvPrice)
 
 
         }
