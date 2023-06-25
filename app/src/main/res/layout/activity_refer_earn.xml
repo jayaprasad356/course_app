@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ReferEarnActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/primary_color">
+        >
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/ic_arrow_back"
+            android:backgroundTint="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            />
+
+
+        <TextView
+            android:layout_toRightOf="@+id/iv_back"
+            android:id="@+id/tv_refer_earn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refer &amp; Earn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical"
+        >
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refer and Earn"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invite your friends and earn rewards!"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/opensans"
+            android:textColor="@color/primary_color" />
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share with Friends"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Referral Code:"
+            android:textSize="18sp"
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ABC123"
+            android:textSize="24sp"
+            android:textColor="@color/primary_color"
+            android:fontFamily="@font/opensans_semibold"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share this code with your friends to earn rewards!"
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/opensans"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnCopyCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Copy Code"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:layout_marginTop="16dp" />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

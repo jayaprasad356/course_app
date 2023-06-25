@@ -21,9 +21,10 @@
             >
 
             <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/ivCourseImage"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_100sdp"
-                android:background="@drawable/ms_img"
                 />
 
 

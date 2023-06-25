@@ -18,4 +18,8 @@
     <string name="edit">Edit</string>
     <string name="update">Update</string>
     <string name="session">Session</string>
+    <string name="dialog_error_title">Error</string>
+    <string name="dialog_ok">OK</string>
+    <string name="confirm_password">Confirm Password</string>
+
 </resources>

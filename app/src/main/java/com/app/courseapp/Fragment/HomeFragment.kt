@@ -2,10 +2,12 @@ package com.app.courseapp.Fragment
 
 import android.app.Activity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.courseapp.Adapter.ChipAdapter
 import com.app.courseapp.Adapter.HomeCourseListAdapter
@@ -13,16 +15,20 @@ import com.app.courseapp.Adapter.ImageSliderAdapter
 import com.app.courseapp.Model.HomeCourseList
 import com.app.courseapp.R
 import com.app.courseapp.databinding.FragmentHomeBinding
+import com.app.courseapp.helper.ApiConfig
+import com.app.courseapp.helper.Constant
+import com.app.courseapp.helper.Session
+import com.google.gson.Gson
 import com.smarteist.autoimageslider.SliderAnimations
-import com.smarteist.autoimageslider.SliderView
+import org.json.JSONException
+import org.json.JSONObject
 
 
 class HomeFragment : Fragment() {
 
     lateinit var binding: FragmentHomeBinding
     lateinit var activity: Activity
-
-
+    lateinit var session: Session
 
 
     override fun onCreateView(
@@ -32,6 +38,24 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         activity = getActivity() as Activity
+        session = Session(activity)
+
+
+
+        val animation = AnimationUtils.loadAnimation(context, R.anim.slide_scale_animation)
+
+        binding.rl1.startAnimation(animation)
+        binding.cardView.startAnimation(animation)
+        binding.tvCategories.startAnimation(animation)
+        binding.recyclerView.startAnimation(animation)
+        binding.tvPopular.startAnimation(animation)
+       // binding.rvCourseList.startAnimation(animation)
+
+
+
+
+
+        binding.tvName.setText("Hello," + session.getData(Constant.NAME))
 
 
         val imageList = listOf(
@@ -47,19 +71,17 @@ class HomeFragment : Fragment() {
         binding.imageSlider.startAutoCycle()
 
 
-        val linearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        val linearLayoutManager =
+            LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         binding.rvCourseList.layoutManager = linearLayoutManager
         courseList()
-
-
-
-
 
 
         val chipItems = listOf("Development", "Business", "Design", "Technology", "Finance")
         val adapter = ChipAdapter(chipItems)
         binding.recyclerView.adapter = adapter
-        binding.recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        binding.recyclerView.layoutManager =
+            LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
 
 
         return binding.root
@@ -67,17 +89,66 @@ class HomeFragment : Fragment() {
     }
 
     private fun courseList() {
+//
+//        val courseList = ArrayList<HomeCourseList>()
+//        courseList.add(
+//            HomeCourseList(
+//                "1", "The  Complete Microsoft\n" +
+//                        "word", "Denis Panjuta, Tutorials.eu by Denis pann", "₹ 450"
+//            )
+//        )
+//        courseList.add(
+//            HomeCourseList(
+//                "2", "The  Complete Microsoft\n" +
+//                        "word", "Denis Panjuta, Tutorials.eu by Denis pann", "₹ 450"
+//            )
+//        )
+//        courseList.add(
+//            HomeCourseList(
+//                "3", "The  Complete Microsoft\n" +
+//                        "word", "Denis Panjuta, Tutorials.eu by Denis pann", "₹ 450"
+//            )
+//        )
 
-        val courseList = ArrayList<HomeCourseList>()
-        courseList.add(HomeCourseList("1","The  Complete Microsoft\n" +
-                "word","Denis Panjuta, Tutorials.eu by Denis pann","₹ 450"))
-        courseList.add(HomeCourseList("2","The  Complete Microsoft\n" +
-                "word","Denis Panjuta, Tutorials.eu by Denis pann","₹ 450"))
-        courseList.add(HomeCourseList("3","The  Complete Microsoft\n" +
-                "word","Denis Panjuta, Tutorials.eu by Denis pann","₹ 450"))
 
-        val adapter = HomeCourseListAdapter(activity,courseList)
-        binding.rvCourseList.adapter = adapter
+        val params: MutableMap<String, String> = HashMap()
+        params[Constant.COURSE_ID] = "1"
+        ApiConfig.RequestToVolley({ result, response ->
+            if (result) {
+                try {
+                    val jsonObject = JSONObject(response)
+                    if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                        val `object` = JSONObject(response)
+                        val jsonArray = `object`.getJSONArray(Constant.DATA)
+                        val g = Gson()
+                        val courseList: java.util.ArrayList<HomeCourseList> =
+                            java.util.ArrayList<HomeCourseList>()
+                        for (i in 0 until jsonArray.length()) {
+                            val jsonObject1 = jsonArray.getJSONObject(i)
+                            if (jsonObject1 != null) {
+                                val group: HomeCourseList =
+                                    g.fromJson(jsonObject1.toString(), HomeCourseList::class.java)
+                                courseList.add(group)
+                            } else {
+                                break
+                            }
+                        }
+                        val adapter = HomeCourseListAdapter(activity, courseList)
+                        binding.rvCourseList.adapter = adapter
+                    } else {
+                        Toast.makeText(
+                            activity,
+                            "" + jsonObject.getString(Constant.MESSAGE),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                }
+            }
+        }, activity, Constant.COURSE_LIST, params, true, 1)
+
+
     }
 
 

@@ -7,18 +7,20 @@
     tools:context=".Activity.CourseViewActivity">
 
 
-
     <RelativeLayout
-        android:layout_margin="@dimen/_5sdp"
         android:id="@+id/rl1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_160sdp"
-        >
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp">
 
         <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/ivCourse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/ms_img"
 
             />
 
@@ -47,6 +49,7 @@
 
 
         <TextView
+            android:id="@+id/tvCourseAuthor"
             android:layout_marginTop="@dimen/_4sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

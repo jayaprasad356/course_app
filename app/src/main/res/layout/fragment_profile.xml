@@ -27,14 +27,6 @@
                 android:textSize="@dimen/_16sdp" />
 
 
-            <ImageButton
-                android:id="@+id/ibCart"
-                android:layout_width="@dimen/_22sdp"
-                android:layout_height="@dimen/_22sdp"
-                android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"
-                android:background="@drawable/ic_cart"
-                android:backgroundTint="@color/Darkgray" />
 
 
         </RelativeLayout>
@@ -77,15 +69,17 @@
                     android:backgroundTint="@color/primary_color" />
 
                 <TextView
+                    android:id="@+id/tvName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:fontFamily="@font/opensans_semibold"
-                    android:text="Tamil"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="@dimen/_14sdp" />
 
                 <TextView
+                    android:id="@+id/tvEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_2sdp"
@@ -94,7 +88,7 @@
                     android:drawableTint="@color/Darkgray"
                     android:fontFamily="@font/opensans"
                     android:gravity="center"
-                    android:text="tamil632000@gmail.com"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="@dimen/_12sdp" />
 
@@ -120,6 +114,17 @@
 
 
 
+            <TextView
+                android:id="@+id/tvReferEarn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Refer &amp; Earn"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/opensans_semibold"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_rightarrow"
+                android:layout_marginBottom="@dimen/_10sdp"
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -162,6 +167,7 @@
                 />
 
                 <TextView
+                    android:id="@+id/tvLogout"
                     android:layout_marginTop="@dimen/_50sdp"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"

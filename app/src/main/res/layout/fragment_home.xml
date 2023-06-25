@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragment.HomeFragment">
+    tools:context=".Fragment.HomeFragment"
+    android:animateLayoutChanges="true"
+    android:id="@+id/rootLayout">
 
 
 
@@ -32,10 +34,11 @@
                 >
 
                 <TextView
+                    android:id="@+id/tvName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="Hi Adem"
+                    android:text=""
                     android:fontFamily="@font/opensans"
                     android:textSize="@dimen/_14sdp"
                     />
@@ -84,6 +87,7 @@
 
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="@dimen/_10sdp"
@@ -120,6 +124,7 @@
 
 
                 <TextView
+                    android:id="@+id/tvCategories"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -142,6 +147,7 @@
 
 
                 <TextView
+                    android:id="@+id/tvPopular"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

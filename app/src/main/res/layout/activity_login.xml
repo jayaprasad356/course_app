@@ -8,15 +8,22 @@
     android:padding="@dimen/_20sdp">
 
 
+    <ScrollView
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
     <LinearLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:layout_marginBottom="@dimen/_20sdp"
         android:orientation="vertical">
 
 
         <TextView
+            android:id="@+id/tvLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/opensans_semibold"
@@ -26,6 +33,7 @@
             android:textSize="@dimen/_22sdp" />
 
         <TextView
+            android:id="@+id/tvLoginSubTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/opensans"
@@ -100,5 +108,7 @@
 
 
     </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

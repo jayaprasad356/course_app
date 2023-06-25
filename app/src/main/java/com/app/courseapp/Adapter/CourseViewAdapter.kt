@@ -5,6 +5,8 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.app.courseapp.Activity.CourseViewActivity
@@ -36,6 +38,9 @@ class CourseViewAdapter (
         holder.tvNo.text=report.id
         holder.tvCourseName.text=report.title
 
+        holder.rlMain.startAnimation(AnimationUtils.loadAnimation(holder.itemView.context, R.anim.recycler_anim1))
+
+
 
     }
 
@@ -49,12 +54,14 @@ class CourseViewAdapter (
         val tvNo: TextView
         val tvCourseName: TextView
         val tvDuration: TextView
+        val rlMain : RelativeLayout
 
 
         init {
             tvNo = itemView.findViewById(R.id.tvNo)
             tvCourseName = itemView.findViewById(R.id.tvCourseName)
             tvDuration = itemView.findViewById(R.id.tvDuration)
+            rlMain = itemView.findViewById(R.id.rlMain)
 
         }
     }

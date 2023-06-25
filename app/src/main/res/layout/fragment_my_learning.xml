@@ -30,23 +30,13 @@
 
 
             <ImageButton
-                android:layout_width="@dimen/_22sdp"
-                android:layout_height="@dimen/_22sdp"
-                android:layout_centerInParent="true"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:layout_toLeftOf="@+id/ibCart"
-                android:background="@drawable/ic_search"
-                android:backgroundTint="@color/Darkgray" />
-
-            <ImageButton
-                android:layout_centerInParent="true"
-                android:id="@+id/ibCart"
                 android:layout_alignParentRight="true"
                 android:layout_width="@dimen/_22sdp"
                 android:layout_height="@dimen/_22sdp"
-                android:background="@drawable/ic_cart"
-                android:backgroundTint="@color/Darkgray"
-                />
+                android:background="@drawable/ic_search"
+                android:backgroundTint="@color/Darkgray" />
+
+
 
 
 

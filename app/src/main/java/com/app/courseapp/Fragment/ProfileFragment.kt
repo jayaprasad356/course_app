@@ -8,15 +8,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.app.courseapp.Activity.EditProfileActivity
-import com.app.courseapp.R
-import com.app.courseapp.databinding.FragmentMyLearningBinding
+import com.app.courseapp.Activity.ReferEarnActivity
 import com.app.courseapp.databinding.FragmentProfileBinding
+import com.app.courseapp.helper.Constant
+import com.app.courseapp.helper.Session
 
 
 class ProfileFragment : Fragment() {
 
     lateinit var binding: FragmentProfileBinding
     lateinit var activity: Activity
+    lateinit var session: Session
 
 
     override fun onCreateView(
@@ -26,12 +28,33 @@ class ProfileFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentProfileBinding.inflate(inflater, container, false)
 
+        activity = getActivity() as Activity
+
+        session = Session(activity)
+
+
+        binding.tvName.setText(session.getData(Constant.NAME))
+        binding.tvEmail.setText(session.getData(Constant.EMAIL))
+
 
         binding.tvEdit.setOnClickListener {
 
             val intent = Intent(activity, EditProfileActivity::class.java)
             startActivity(intent)
 
+
+        }
+
+        binding.tvLogout.setOnClickListener {
+
+            session.logoutUser(activity)
+
+        }
+
+        binding.tvReferEarn.setOnClickListener {
+
+            val intent = Intent(activity, ReferEarnActivity::class.java)
+            startActivity(intent)
 
         }
 
