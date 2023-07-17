@@ -1,7 +1,7 @@
 package com.app.courseapp.helper;
 
 public class Constant {
-    public static final String MainBaseUrl = "https://course.graymatterworks.com/";
+    public static final String MainBaseUrl = "https://courseapp.graymatterworks.com/";
 
     public static final String BaseUrl = MainBaseUrl + "api/v1/";
 
@@ -10,8 +10,10 @@ public class Constant {
     public static final String REGISTER = BaseUrl + "register";
     public static final String APPUPDATE = BaseUrl + "app_update";
     public static final String COURSE_LIST = BaseUrl + "course_list";
+    public static final String SESSION_LIST = BaseUrl + "session_list";
     public static final String MY_COURSE_LIST = BaseUrl + "my_course_list";
     public static final String USER_DETAILS = BaseUrl + "userdetails";
+    public static final String UPDATE_PROFILE = BaseUrl + "update_profile";
 
 
 

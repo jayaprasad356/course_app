@@ -37,7 +37,7 @@ class MyLearningAdapter(
     override fun onBindViewHolder(holderParent: RecyclerView.ViewHolder, position: Int) {
         val holder: ItemHolder = holderParent as ItemHolder
         val report: Mylearning = mylearning[position]
-        holder.tvTitle.text = report.course_title
+        holder.tvTitle.text = report.course_tittle
         holder.tvAuthor.text = report.author
         Glide.with(activity)
             .load(report.image)
@@ -54,7 +54,7 @@ class MyLearningAdapter(
 
             Intent(activity, CourseViewActivity::class.java).also {
                 it.putExtra("id", report.id)
-                it.putExtra("title", report.course_title)
+                it.putExtra("title", report.course_tittle)
                 it.putExtra("author", report.author)
                 it.putExtra("image", report.image)
                 activity.startActivity(it)
@@ -82,8 +82,6 @@ class MyLearningAdapter(
             tvPrice = itemView.findViewById(R.id.tvPrice)
             cardView = itemView.findViewById(R.id.cardView)
             ivImg = itemView.findViewById(R.id.ivImg)
-
-
         }
     }
 }

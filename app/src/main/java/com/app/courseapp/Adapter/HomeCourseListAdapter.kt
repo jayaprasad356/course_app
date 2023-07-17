@@ -41,7 +41,7 @@ class HomeCourseListAdapter (
     override fun onBindViewHolder(holderParent: RecyclerView.ViewHolder, position: Int) {
         val holder:ItemHolder = holderParent as ItemHolder
         val report: HomeCourseList = homeCourseList[position]
-        holder.tvTitle.text=report.course_title
+        holder.tvTitle.text=report.course_tittle
         holder.tvAuthor.text=report.author
 
         Glide.with(activity)
@@ -49,15 +49,15 @@ class HomeCourseListAdapter (
             .placeholder(R.drawable.ms_img)
             .into(holder.ivCourseImage)
 
-
-        holder.itemView.setOnClickListener {
-            val intent = Intent(activity, CourseViewActivity::class.java)
-            intent.putExtra("id", report.id)
-            intent.putExtra("title", report.course_title)
-            intent.putExtra("author", report.author)
-            intent.putExtra("image", report.image)
-            activity.startActivity(intent)
-        }
+//
+//        holder.itemView.setOnClickListener {
+//            val intent = Intent(activity, CourseViewActivity::class.java)
+//            intent.putExtra("id", report.id)
+//            intent.putExtra("title", report.course_tittle)
+//            intent.putExtra("author", report.author)
+//            intent.putExtra("image", report.image)
+//            activity.startActivity(intent)
+//        }
 
 
     }

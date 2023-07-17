@@ -2,22 +2,23 @@ package com.app.courseapp.Model
 
 class CourseView {
     var id: String? = null
-    var title: String? = null
-    var author: String? = null
-    var price: String? = null
+    var tittle: String? = null
+    var video_link: String? = null
+    var video_duration: String? = null
 
 
     constructor() {}
     constructor(
         id: String?,
         title: String?,
-        author: String?,
-        price: String?,
+        video_link: String?,
+        video_duration: String?
 
         ) {
         this.id = id
-        this.title = title
-        this.author = author
+        this.tittle = title
+        this.video_link = video_link
+        this.video_duration = video_duration
 
     }
 

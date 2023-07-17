@@ -54,15 +54,7 @@ class ReferEarnActivity : AppCompatActivity() {
 
         }
 
-        binding.btnCopyCode.setOnClickListener{
 
-            val text = binding.tvCode.text.toString()
-            val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
-            val clip = ClipData.newPlainText("label", text)
-            clipboard.setPrimaryClip(clip)
-            Toast.makeText(applicationContext, "Copied", Toast.LENGTH_SHORT).show()
-
-        }
 
         setContentView(binding.root)
 

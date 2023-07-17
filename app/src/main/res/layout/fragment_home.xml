@@ -124,6 +124,7 @@
 
 
                 <TextView
+                    android:visibility="gone"
                     android:id="@+id/tvCategories"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:layout_width="wrap_content"
@@ -136,6 +137,7 @@
 
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
@@ -151,7 +153,7 @@
                     android:layout_marginTop="@dimen/_20sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Popular for Ms-office"
+                    android:text="Course List"
                     android:fontFamily="@font/opensans_semibold"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_18sdp"

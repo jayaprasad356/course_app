@@ -103,7 +103,7 @@ class CourseViewActivity : AppCompatActivity() {
                     e.printStackTrace()
                 }
             }
-        }, activity, Constant.COURSE_LIST, params, true, 1)
+        }, activity, Constant.SESSION_LIST, params, true, 1)
 
 
     }

@@ -42,96 +42,127 @@
 
 
 
-    <LinearLayout
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop" />
+
+
+
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="@dimen/_80sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/sky_blue"
+            app:cardCornerRadius="@dimen/_12sdp"
+            >
+
+            <ImageView
+                android:layout_gravity="right|bottom"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@drawable/card_bg_shadow"
+                />
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:background="@drawable/card_bg"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/gift_img"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Invite your friends\nearn rewards!"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/_16sdp" />
+
+                <TextView
+                    android:id="@+id/tvCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/opensans"
+                    android:gravity="center_horizontal"
+                    android:text="ABC123"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:background="@drawable/rounded_corner"
+                    android:backgroundTint="@color/yellow_light"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Share this code with your friends to earn rewards!"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <Button
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:paddingVertical="@dimen/_16sdp"
+        android:id="@+id/btnShare"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:padding="@dimen/_10sdp"
-        android:orientation="vertical"
-        >
-
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_launcher_background"
-            android:layout_gravity="center_horizontal"
-            android:scaleType="centerCrop" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Refer and Earn"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/opensans_semibold"
-            android:layout_marginTop="16dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Invite your friends and earn rewards!"
-            android:textSize="16sp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:fontFamily="@font/opensans"
-            android:textColor="@color/primary_color" />
-
-        <Button
-            android:id="@+id/btnShare"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Share with Friends"
-            android:textColor="@android:color/white"
-            android:textAllCaps="false"
-            android:layout_marginTop="16dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Your Referral Code:"
-            android:textSize="18sp"
-            android:fontFamily="@font/opensans_semibold"
-            android:layout_marginTop="16dp" />
-
-        <TextView
-            android:id="@+id/tvCode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ABC123"
-            android:textSize="24sp"
-            android:textColor="@color/primary_color"
-            android:fontFamily="@font/opensans_semibold"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="8dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Share this code with your friends to earn rewards!"
-            android:textSize="16sp"
-            android:gravity="center_horizontal"
-            android:fontFamily="@font/opensans"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/black" />
-
-        <Button
-            android:id="@+id/btnCopyCode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Copy Code"
-            android:textColor="@android:color/white"
-            android:textAllCaps="false"
-            android:layout_marginTop="16dp" />
-
-
-
-
-    </LinearLayout>
-
-
-
+        android:text="Share with Friends"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/opensans"
+        android:textAllCaps="false"
+        android:layout_marginTop="14dp" />
 
 
 

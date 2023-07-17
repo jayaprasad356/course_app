@@ -3,7 +3,10 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginRight="@dimen/_10sdp">
+    android:layout_marginRight="@dimen/_10sdp"
+    android:background="@drawable/stroke"
+    android:padding="@dimen/_5sdp"
+    >
 
 
 
@@ -21,7 +24,7 @@
             >
 
             <ImageView
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:id="@+id/ivCourseImage"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_100sdp"
@@ -44,17 +47,36 @@
             />
 
         <TextView
-            android:id="@+id/tvAuthor"
+        android:id="@+id/tvAuthor"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Denis Panjuta, Tutorials.eu by Denis pann"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/opensans"
+        />
+
+
+        <TextView
+            android:id="@+id/tvPrice"
             android:layout_marginTop="@dimen/_2sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Denis Panjuta, Tutorials.eu by Denis pann"
-            android:textSize="@dimen/_10sdp"
-            android:fontFamily="@font/opensans"
+            android:text="₹ 3,000"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/opensans_semibold"
             />
 
 
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Purchase"
+            android:textColor="@color/secondary_color"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            />
 
 
 

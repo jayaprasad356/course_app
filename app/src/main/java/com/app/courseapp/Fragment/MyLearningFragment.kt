@@ -65,7 +65,7 @@ class MyLearningFragment : Fragment() {
 
 
         val params: MutableMap<String, String> = HashMap()
-        params[Constant.USER_ID] = "11"
+//        params[Constant.USER_ID] = "11"
         ApiConfig.RequestToVolley({ result, response ->
             if (result) {
                 try {

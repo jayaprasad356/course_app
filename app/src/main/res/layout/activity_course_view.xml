@@ -20,8 +20,7 @@
             android:scaleType="fitXY"
             android:id="@+id/ivCourse"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
+            android:layout_height="@dimen/_160sdp"
             />
 
 
@@ -77,5 +76,15 @@
 
 
     </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Purchase"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:textColor="@color/secondary_color"
+        />
 
 </RelativeLayout>
